@@ -1,11 +1,11 @@
-function predictAge(...age) {
-    const allAge = age
+function predictAge(...ageArg) {
+    const allAge = [...ageArg]
 
-    let result = 0;
+    let sum = 0;
     for (let i = 0; i < allAge.length; i++) {
-        result += allAge[i] * allAge[i]
+        sum += allAge[i] * allAge[i]
     }
-    return  Math.trunc(Math.sqrt(result) / 2)
+    return  Math.trunc(Math.sqrt(sum) / 2)
 }
 
 
